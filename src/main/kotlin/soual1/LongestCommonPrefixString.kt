@@ -8,7 +8,7 @@ fun longestCommonPrefix(words: MutableList<String>): CharSequence? {
     val end = words[0].length.coerceAtMost(words[size - 1].length)
     var i = 0
     while (i < end && words[0][i] == words[size - 1][i]) i++
-    return if (words[0].subSequence(0, i)=="") null else words[0].subSequence(0, i)
+    return words[0].subSequence(0, i)
 }
 
 fun main() {
